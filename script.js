@@ -74,13 +74,11 @@ let countEl = document.getElementById("count-el");
 // grab the save-el paragraph and store it in a variable
 let saveEl = document.getElementById("save-el");
 
-console.log(countEl);
-
 let count = 0;
 
 function increment() {
 	count += 1;
-	countEl.innerText = count;
+	countEl.textContent = count;
 }
 
 function save() {
@@ -88,8 +86,7 @@ function save() {
 	let counter = count + " - ";
 	// render the variable in the saveEl using inner text
 	// console.log(saveEl.innerText);
-	saveEl.innerText += counter;
-	console.log(count);
+	saveEl.textContent += counter;
+	countEl.textContent = 0;
+	count = 0;
 }
-
-save();
